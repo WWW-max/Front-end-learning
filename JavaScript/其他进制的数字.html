@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        a = 0x10;//十六进制
+        b = 010;//八进制
+        c = 0b1101;//二进制
+
+        console.log(a+" "+b+" "+c);
+         //"070"这种字符串，不同的浏览器，解析采用的进制不同，可能八进制，可能十进制
+        //可以用parseInt()第二个参数，指定数字的进制
+        console.log(parseInt(b,10));
+        
+    </script>
+</head>
+<body>
+    <h1>hello</h1>
+</body>
+</html>
