@@ -33,7 +33,40 @@
         -Undefined(未定义)类型的值只有一个 就是undefined
 
         -强制类型转换，类型转换主要指，将其他的数据类型，转换为String Number Boolean
-
+        
+        -将其他类型转换为String
+        方式一：
+              -调用被转换数据类型的tostring()方法
+              -该方法不影响原变量，他会将转换的结果返回
+              -但是注意：null和undefined这两个没有tostring()方法
+                 如果调用他们的方法，会报错
+        方式二：
+              -调用String()函数，并将被转换的数据作为参数传递给函数
+              -使用String()函数做强制转换时，对于Number和Boolean实际上就是调用toString()方法
+                对于null和undefined,就不会调用toString()方法
+                     他会将null直接转换为"null"
+                     将undefined直接转换为"undefined"
+        -将其他类型转换为Number
+        方式一：
+              -使用Number()函数
+               字符串--->数字：如果纯数字字符串转为数字
+                              如果有非数字内容转为NaN
+                              如果空字符串/全为空格的字符串转为0
+               布尔---->数字：true-->1
+               Null --->数字： 0
+               undefined-->数字：NaN 
+        方式二：
+             -这种方式专门用来对付字符串
+             parseInt() 可以将一个字符串中的有效整数取出来
+             parseInt(123px)---->123       -都是从左到右匹配
+             parseInt(123.15px) --->1234
+             parseInt(a123)---->NaN
+             parseFloat() 将一个字符串中的有效浮点数取出来
+             parseFloat(123.456.7)---->123.456
+             
+             如果对非String使用parseInt()/parseInt()
+              它会先将其转换为String再取浮点数/整数
+              parseInt(true)---->NaN
 
         -
         */
