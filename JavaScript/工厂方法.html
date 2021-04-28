@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        function createPerson(name,gender,age){
+            var obj = new Object();
+
+            obj.name=name;
+            obj.gender=gender;
+            obj.age=age;
+
+            return obj;
+
+        }
+        var obj1=createPerson("张三","男",20);
+        var obj2=createPerson("李四","女",18);
+        var obj3=createPerson("王五","男",30);
+
+        // console.log(obj1);
+        // console.log(obj2);
+        // console.log(obj3);
+        for(var n in obj1){
+            console.log(obj1[n]);
+        }
+        for(var n in obj2){
+            console.log(obj2[n]);
+        }
+        for(var n in obj3){
+            console.log(obj3[n]);
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
