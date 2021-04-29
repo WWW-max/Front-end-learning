@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+         /**
+          * 原型prototype
+          * 
+          * 我们所创建的每一个函数，解析器都会向函数中添加一个属性prototype
+          * 这个属性对应一个对象，这个对象就是所谓的原型对象
+          * 如果函数作为普通对象调用prototype没有任何作用
+          * 当函数以构造函数形式调用时，他所创建的对象中都会有一个隐含的属性
+          * 指向该构造函数的原型对象，我们可以通过__proto__来访问该属性
+          * 
+          * 原型对象就相当于一个公共的区域，所有同一个类的实例都可以访问到这个对象
+          * 我们可以将对象中公共的内容，统一设置到原型对象中
+          * 
+          * 当访问对象的一个属性或方法时，他会先在对象自身中寻找，如果有则直接使用，如果没有则去原型对象找
+          * Persion.prototype.sayHello=function(){
+          *         
+          * }
+          * 
+          * 使用in检查对象中是否有某个属性时，如果对象中没有但是原型中有，也会返回true
+          * 可以使用对象的hasOwnProperty()来检查对象自身中是否含有该属性
+          * 原型对象也是对象，所以它也有原型
+          * 自身如果有直接使用，如果没有去原型找，直到找到Object对象的原型
+          * Object对象的原型没有原型，如果object的原型中依然没有找到，则返回undefined ------原型链
+          */
+         function Person(){
+
+         }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
