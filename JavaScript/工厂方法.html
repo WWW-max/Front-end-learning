@@ -20,18 +20,27 @@
         var obj2=createPerson("李四","女",18);
         var obj3=createPerson("王五","男",30);
 
-        // console.log(obj1);
-        // console.log(obj2);
-        // console.log(obj3);
-        for(var n in obj1){
-            console.log(obj1[n]);
+        console.log(obj1);
+        console.log(obj2);
+        console.log(obj3);
+
+        // for(var n in obj1){
+        //     console.log(obj1[n]);
+        // }
+        // for(var n in obj2){
+        //     console.log(obj2[n]);
+        // }
+        // for(var n in obj3){
+        //     console.log(obj3[n]);
+        // }
+
+        function Person(name,age){
+
+            this.name=name;
+            this.age=age;
         }
-        for(var n in obj2){
-            console.log(obj2[n]);
-        }
-        for(var n in obj3){
-            console.log(obj3[n]);
-        }
+        var persion = new Person("wzp",25);
+        console.log(persion);
     </script>
 </head>
 <body>
