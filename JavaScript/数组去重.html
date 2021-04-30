@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			var a = [1,2,3,2,2,4,2];
+			for(var i=0;i<a.length;i++){
+				for(var j=i+1;j<a.length;j++){
+					if(a[i]==a[j]){
+						a.splice(j,1);
+						j--;//注意这一步
+					}
+				}
+			}
+			console.log(a);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
