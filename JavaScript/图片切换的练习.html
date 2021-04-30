@@ -25,17 +25,18 @@
 	<script type="text/javascript">
 		window.onload=function(){
 			var imgarr=["src/1.jpg","src/2.jpg","src/3.jpg"];
-			var pre = document.getElementsById("pre");
+			var prev =document.getElementById("prev");
+		//	var prev =document.getElementById("prev");
 			var next = document.getElementById("next");
-			var img =document.getElementsByTagName("img")[0];
-			var i=2;
-			pre.onclick = function(){
-				alert("上一张");
-				//img.src=imgarr[1];
+			 var img =document.getElementsByTagName("img")[0];
+			// var i=2;
+			prev.onclick = function(){
+			//	alert("上一张");
+				img.src=imgarr[1];
 			};
 			next.onclick = function(){
-				alert("下一张");
-				//img.src=imgarr[4];
+			//	alert("下一张");
+				img.src=imgarr[2];
 			};
 		};
 	</script>
@@ -43,7 +44,7 @@
 <body>
     <div id="outer">
          <img src="src/1.jpg">
-         <button id="pre" >上一页</button>
+         <button id="prev"  >上一页</button>
          <button id="next">下一页</button>
 		 
         
