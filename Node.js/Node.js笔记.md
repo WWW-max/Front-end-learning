@@ -114,3 +114,83 @@ module.exports = { }; //类似对象本身
 
 
 
+包（package）简介：
+
+将一组相关的模块组合到一起，形成一组完整的工具
+
+包由**包结构**和**包描述文件**组成
+
+包结构：用来组织包中的各种文件
+
+包描述文件：描述包的相关信息，以供外部读取分析
+
+包实际上就是一个压缩文件，解压后还原为目录
+
+规范的目录包含如下文件：
+
+**-package.json       描述文件**
+
+-bin    可执行二进制文件
+
+-lib      js代码
+
+-doc    文档
+
+-test    测试
+
+
+
+包描述文件用于表达非代码相关的信息
+
+它是一个json格式的文件-package.json，位于包的根目录下
+
+注意：json文件中不能有注释
+
+
+
+NPM(Node Package Manager)
+
+* CommonJS包规范是理论，NPM是其中一中实践
+* 对于Node而言，NPM帮助其完成了第三方模块的发布、安装和依赖等，借助NPM, Node与第三方模块之间形成了很好的一个生态系统
+
+
+
+NPM常用命令：
+
+-npm  帮助说明
+
+-npm -v   查看npm版本
+
+-npm version 查看所有模块的版本
+
+-npm init  初始化文件夹生成 package.json
+
+-npm search 包名   搜索包
+
+-npm install/i  包名   安装包
+
+-npm install 包名 --save 安装包并添加到依赖中
+
+-npm install 下载当前项目所依赖的包
+
+-npm install 包名 -g 全局安装包（全局安装的包一般都是一些工具）
+
+-npm  remove/r  包名 删除包
+
+
+
+cnpm:   淘宝npm镜像
+
+命令：npm install -g cnpm --registry=https://registry.npm.taobao.org
+
+
+
+node搜索包的流程：
+
+通过npm/cnpm下载的包都在node_modules文件夹中
+
+通过npm/cnpm下载的包，直接通过包名引入即可
+
+var math =require("math");
+
+var express = require("express");
