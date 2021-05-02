@@ -194,3 +194,56 @@ node搜索包的流程：
 var math =require("math");
 
 var express = require("express");
+
+node在使用模块名字引入模块时，首先在当前目录的node_modules中寻找是否含有该模块
+
+如果有直接使用，没有则去上一级目录的node_modules中寻找，以此类推直到找到为止，如果找到磁盘根目录依然没有，则报错
+
+
+
+缓存区Buffer: 客户端发过来的请求是二进制文件，存储到缓冲区，响应的数据也先存储到缓冲区。
+
+Buffer的结构和数组很像，操作的方法也和数组类似。
+
+数组中不能存储二进制的文件，而Buffer就是专门用来存储二进制数据
+
+使用buffer不需要引入模块，直接使用即可
+
+var str = "hello";
+
+var buf = Buffer.from("str");
+
+在buffer中存储的都是二进制数据，但是在显示时都是以16进制的形式显示，buffer中每一个元素范围00-ff
+
+var buf = new Buffer(1024);  //1kb
+
+注意：buffer中所有构造函数都已经弃用，不推荐使用
+
+var buf2 = Buffer.alloc(10); //创建一个10个字节的buffer
+
+//通过索引来操作buf中的元素
+
+buf[0]=88;
+
+buffer一旦创建大小不能改变
+
+只要数字在控制台或页面中输出一定是10进制，调用tostring()指定进制
+
+console.log(buf2[2].tostring(10));  
+
+
+
+Buffer.from(str);  //将一个字符串转换为buffer
+
+Buffer.alloc(size);  //创建一个指定大小的Buffer
+
+Buffer.allocUnsafe(size); //创建一个指定大小的Buffer,但是可能包含敏感数据
+
+buf.toString();  //将缓冲区中的数据转换为字符串
+
+
+
+
+
+
+
