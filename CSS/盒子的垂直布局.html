@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+    /* 
+    子元素是在父元素的内容区中排列的
+     如果子元素的大小超过了父元素，则子元素会从父元素中溢出
+     使用overflow属性来设置父元素如何处理溢出的子元素
+     可选值：
+           -visible,默认值 子元素会溢出
+           -hidden  溢出内容不会显示
+           -scroll   生成两个滚动条
+           -auto 根据需要生成滚动条 */
+             .box{
+                 background-color: violet;
+                 width: 200px;
+                 height: 600px;
+                
+             }
+             .inner1{
+                 background-color:teal;
+                 width:200px;
+                 height: 200px;
+                 margin-bottom:30px;
+                 overflow:auto;
+                 
+             }
+             .inner2{
+                 background-color: yellow;
+                 width:200px;
+                 height:200px;
+             }
+    </style>
+</head>
+<body>
+     <div class="box">
+         <div class="inner1">黄秋生还称，现在该骗的应该都已经骗了，他目前只能用台湾的手机号码，香港的手机号码还没拿回来。
+
+            据此前报道，黄秋生在4月18日被证实，他去年申请台湾“就业金卡”已核准，有效期最多为3年。根据报道，黄秋生于金卡有效期内，在台可享减免所得税优惠及健保。此事在当时引起不少岛内网友就斥责其有什么资格享有台湾健保等福利。
+            
+            近些年，台湾诈骗案件频发，一度成为了“诈骗天堂”，被诈骗对象不单针对大陆居民，台湾自己人也有不少被骗，一位台湾“立委”以台“警政署”的统计，提出2014年后台湾诈骗案，尤其是电话诈骗、网络诈骗增多。他介绍，据警方统计，2015年台湾共发生诈骗案7264起，较2014年增加2671件；受骗金额、受害人也都大幅增加。
+            
+            对于黄秋生来台后被骗，岛内网友讽刺道：“没接到诈骗电话，怎能成为正港（闽南话：真正）的台湾人？‘诈骗之岛’是白叫的？”↓</div>
+         <div class="inner2"></div>
+     </div>
+</body>
+</html>
