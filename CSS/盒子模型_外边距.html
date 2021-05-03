@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>外边距</title>
+    <style type="text/css">
+    /* 
+    外边距margin:
+                -外边距不会影响盒子可见框的大小，但是会印象盒子的位置
+                -margin-top:上外边距，设置一个正值元素向下移动
+                -margin-right:右外边距，设置值不会产生任何效果
+                -margin-bottom:下外边距，设置正值下边元素向下移动
+                -margin-left:左外边距，设置正值元素向右移动
+                -margin:简写属性和padding一样
+                -margin会影响盒子实际占用的空间
+     */
+                .box1{
+                    background-color:chocolate;
+                    width: 200px;
+                    height: 200px;
+                    border:cornflowerblue 10px solid;
+                    margin-left:200px;
+                    margin-top:100px;
+                    margin-bottom: 200px;
+                }
+                .box2{
+                    background-color:darkcyan;
+                    width: 200px;
+                    height: 200px;
+                    border: darkgreen 10px solid;
+                }
+    </style>
+</head>
+<body>
+    <div class="box1">
+
+    </div>
+    <div class="box2"></div>
+</body>
+</html>
