@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>水平布局</title>
+
+    <style type="text/css">
+    /* 一个元素在其父元素中，水平布局必须要满足以下等式
+    margin-left+border-left+padding-left+width+padding-right+border-right+margin-right=其父元素的宽度（必须满足）
+     如果不相等，称为过渡约束，等式会自动调整
+     如果七个值中没有为auto的值，则浏览器会自动调整margin-right值以使等式成立
+     width、margin-left、margin-right这三个值可以设置为auto
+     margin-left: auto;   width默认就是auto
+
+     -如果将一个宽度和一个外边距设置为auto,则宽度会调整到最大，设置为auto
+     -三个值都设置为auto,则外边距都是0，宽度最大
+     -两个外边距设置auto,宽度固定值，则会将外边距设置成相同的值，常用该方法来使一个元素在父元素中居中
+     */
+            .box1{
+                border:rgb(223, 64, 64) 10px solid;
+                width: 800px;
+                height:200px;
+            }
+            .inner{
+                margin-right:auto ;
+                margin-left:auto;
+                padding-left:100px;
+                padding-right: 100px;
+                width: 100px;
+              
+                border: solid;
+                border-left:springgreen 5px solid;
+                border-right:springgreen 5px solid;
+                background-color: orange;
+               
+                height: 200px;
+            }
+            
+    </style>
+</head>
+<body>
+    <div class="box1">
+        <div class="inner">
+         
+        </div>
+    </div>
+</body>
+</html>
