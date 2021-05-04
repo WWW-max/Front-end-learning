@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+    /* 
+      垂直外边距的重叠（折叠）
+            -相邻的垂直方向外边距会发生重叠现象
+            -兄弟元素
+                 -兄弟元素的相邻垂直外边距，两者都为正值，取较大值
+                 -一正一负取两者的和
+                 -都是负数取两者中绝对值较大的
+                 -对于开发是有利的，不需要处理
+            -父子元素
+                 -父子元素间相邻外边距，子元素的会传递给父元素（上外边距）
+                 -父子外边距的折叠会影响布局，必须处理
+                 -处理方法1：父元素加上边框
+                 -处理方法2：父元素设置padding */
+            .box1{
+                width:200px;
+                height:200px;
+                background-color: aqua;
+                margin-bottom:5px;
+            }
+            .box2{
+                margin-top:10px;
+                width:200px;
+                height:200px;
+                background-color: burlywood;
+
+            }
+            .father{
+                border-top:chocolate 1px solid;
+                margin-top:50px;
+                 background-color: chartreuse;
+                 width:400px;
+                 height:400px;
+                 /* padding-top: 200px; */
+
+                 
+            }
+            .son{
+                background-color: chocolate;
+                width:200px;
+                height:200px;
+                margin-top: 200px;
+            }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="father">
+        <div class="son"></div>
+    </div>
+</body>
+</html>
