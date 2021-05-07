@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>let</title>
+</head>
+<body>
+    <script>
+        //声明变量
+        let a;
+        let b,c,d;
+        let e=100;
+        let f=12,g='iloveyou',h=[];
+
+        //1.变量不能重复声明
+        // let star="hello";
+        // let star="word";
+
+        //2.块儿级作用域（任何if else while for{}里的）只在块里有效，全局，函数，eval
+        // {
+        //     var aa = `hello`;
+        // }
+        // console.log(aa);
+
+        //3.不存在变量提示，不允许变量声明前使用变量
+        // console.log(song);
+        // let song='恋爱达人';
+
+        //4.不影响作用域链
+        {
+            let s ='hello';
+            function fn(){
+                console.log(s);
+            }
+            fn();
+        }
+      //  console.log(s);
+    </script>
+</body>
+</html>
