@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //声明常量
+        const S ='hello';
+
+        //1.一定要赋初值
+        //const A;
+        //2.一般使用大写
+        //const a =100;
+        //3.常量的值不能修改
+        //SCHOOL='hello';
+        //4.块级作用域，块级作用域外边访问不了
+        {
+            const PLAYER = 'UZI';
+        }
+        console.log(PLAYER);
+        //5.const修饰的数组、对象的引用不能修改，可以修改数组、对象中的元素
+        const ARR = ['hello1','hello2'];
+        ARR.push('hello3');
+    </script>
+</body>
+</html>
