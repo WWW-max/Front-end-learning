@@ -29,14 +29,20 @@
 		//	var prev =document.getElementById("prev");
 			var next = document.getElementById("next");
 			 var img =document.getElementsByTagName("img")[0];
-			// var i=2;
+			 var i=0;
 			prev.onclick = function(){
 			//	alert("上一张");
-				img.src=imgarr[1];
+				img.src=imgarr[i--];
+				if(i<0){
+					i=3;
+				}
 			};
 			next.onclick = function(){
 			//	alert("下一张");
-				img.src=imgarr[2];
+				img.src=imgarr[i++];
+				if(i>3){
+					i=0;
+				}
 			};
 		};
 	</script>
