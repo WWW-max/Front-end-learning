@@ -22,6 +22,28 @@
             margin:10px auto;
 
         }
+        nav,article,aside{
+            float:left;
+            height:100%;
+        }
+        nav{
+            width:200px;
+            height:100%;
+            background-color: darkgreen;
+        }
+        /* 设置中间的内容 */
+        article{
+            width:580px;
+            height:100%;
+            background-color: darkslateblue;
+            margin:0 10px;
+        }
+        /* 设置右侧内容 */
+        aside{
+            width: 200px;
+            background-color: deepskyblue;
+        }
+
         /* 设置底部 */
         footer{
             height:150px ;
@@ -33,7 +55,14 @@
     <!-- 创建头部 -->
     <header>头部</header>
     <!-- 创建网页主体 -->
-    <main>主体</main>
+    <main>
+        <!-- 左侧导航栏 -->
+        <nav>左侧导航栏</nav>
+        <!-- 中间的内容 -->
+        <article>中间的内容</article>
+        <!-- 右边的边栏 -->
+        <aside>右边的边栏</aside>
+    </main>
     <!-- 创建网页底部 -->
     <footer>底部</footer>
 </body>
