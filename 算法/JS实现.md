@@ -25,5 +25,38 @@ var reverseList = function(head) {
 };
 ```
 
+二叉树的镜像
+
+```javascript
+/**
+ * Definition for a binary tree node.
+ * function TreeNode(val) {
+ *     this.val = val;
+ *     this.left = this.right = null;
+ * }
+ */
+/**
+ * @param {TreeNode} root
+ * @return {TreeNode}
+ */
+var mirrorTree = function(root) {
+      let Node = root;
+    if(Node===null) return null;
+    if(Node.left===null&&Node.right===null){
+        return Node;
+    }
+    let temp =Node.left;
+    Node.left=Node.right;
+    Node.right=temp;
+    if(Node.left!==null){
+        mirrorTree(Node.left);
+    }
+    if(Node.right!==null){
+        mirrorTree(Node.right);
+    }
+    return Node;
+};
+```
+
 
 
