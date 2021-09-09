@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>after伪类解决高度塌陷问题</title>
+    <style>
+        .box{
+            border:olivedrab 10px solid;
+        }
+        .box1{
+            float: left;
+            width:100px;
+            height: 100px;
+            background-color: orange;
+            
+        }
+        .box::after{
+            content: '';
+            clear: left;
+            /* after伪元素默认为行内元素不会独占一行，所以转换成块元素 */
+            display:block;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="box1"></div>
+        <div class="box2"></div>
+    </div>
+   
+</body>
+</html>
