@@ -1,0 +1,158 @@
+a{
+    text-decoration: none;
+    color:#fff;
+
+    &:hover{
+        color: rgb(197,196,196);
+    }
+}
+// 导航条的外部容器
+.top-bar-wraper{
+    background-color: black;
+}
+.top-bar{
+    max-width: 1200px;
+    margin:0 auto;
+    height:48px;
+    padding:0 14px;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #000; 
+}
+
+// 设置左侧的导航
+.left-menu{
+    // position: relative;
+    // 设置菜单
+    &:active{
+        //显示隐藏菜单
+        .nav{
+            display: block;
+        }
+    }
+    // 菜单
+    .nav{ 
+        //隐藏左侧菜单
+        display: none;
+        padding-top:50px;
+        position:absolute;
+        top:48px;
+        left:0;
+        right:0;
+        bottom:0;
+        background-color: #000;
+        li{
+            width: 80%;
+            margin: 0 auto;
+            border-bottom: 1px solid #757474;
+
+            a{
+                 display: block;
+                 line-height: 44px;
+                 font-size: 14px;
+            }
+            &:last-child a{
+                display: inline-block;
+                margin-right: 6px;
+
+            }
+            span{
+                color: #fff;
+                font-size: 14px;
+            }
+        }
+    }
+    // 图标
+    .menu-icon{
+        width:18px;
+        height:48px;
+        position: relative;
+
+        // 导航的线
+    li{
+        width: 18px;
+        height: 1px;
+        background-color: #fff;
+        position:absolute;
+        transition:0.5s;
+        transform-origin: left center;
+
+    }
+    li:nth-child(1){
+        top:18px;
+    }
+    li:nth-child(2){
+        top:24px;
+    }
+    li:nth-child(3){
+        top:30px;
+    }
+    &:active{
+        li:nth-child(1){
+            transform: rotateZ(45deg);
+
+        }
+        li:nth-child(2){
+            // 透明
+            opacity: 0;
+        }
+        li:nth-child(3){
+            transform: rotateZ(-45deg);
+        }
+    }
+  }
+}
+.logo{
+    a{
+        text-indent: -9000px;
+        display: block;
+        width: 107px;
+        height: 30px;
+        background-image: url("./logo.png");
+        background-size: 107px 30px;
+    }
+}
+
+// 设置媒体查询
+@media only screen{
+    // 断点768px 
+     @media (min-width:768px){
+       .left-menu{
+          order:2;
+          flex:auto;
+        //   显示菜单
+        .nav{
+            display: flex;
+            position:static;
+            padding:0;
+            justify-content: space-around;
+            li{
+                width: auto;
+                border-bottom:none;
+                a{
+                    line-height: 48px;
+                }
+                span{
+                    display: none;
+                }
+            }
+        }
+        //  隐藏菜单图标
+        .menu-icon{
+            display: none;
+        }
+      }
+      .logo{
+          order:1;
+      }
+      .user-info{
+          order:3;
+      }
+      
+     }
+}
+
+.icon-icon-user{
+    color: white;
+}
