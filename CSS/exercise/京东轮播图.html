@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>京东轮播图</title>
+    <style>
+        .container{
+            display: block;
+            position:absolute;
+            margin: auto;
+            left:0px;
+            right:0px;
+            top:0px;
+            bottom:0px;
+           
+        }
+        img{
+            width: 737px;
+            height: 587px;
+            position:absolute;
+        }
+        .menu{
+            position:absolute;
+            top:550px;
+            left: 38px;
+        }
+        .point{
+            float: left;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.5);
+            z-index:9;
+        }
+        .point:not(first-child){
+            margin-left: 3px;
+        }
+        .point:hover,
+        .active{
+            background-color: #FFFFFF;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="pic1"><img src="./京东轮播图picture/01.webp"/></div>
+        <div class="pic2"><img src="./京东轮播图picture/02.jpg"/></div>
+        <div class="pic3"><img src="./京东轮播图picture/03.jpg"/></div>
+        <div class="pic4"><img src="./京东轮播图picture/04.jpg"/></div>
+        <div class="pic5"><img src="./京东轮播图picture/05.jpg"/></div>
+        <div class="pic6"><img src="./京东轮播图picture/06.jpg"/></div>
+        <div class="pic7"><img src="./京东轮播图picture/07.webp"/></div>
+        <div class="pic8"><img src="./京东轮播图picture/08.webp"/></div>
+        <div class="menu">
+        
+            <div class="active"></div>
+            <div class="point"></div>
+            <div class="point"></div>
+            <div class="point"></div>
+            <div class="point"></div>
+            <div class="point"></div>
+            <div class="point"></div>
+            <div class="point"></div>
+        </div>
+    </div>
+    
+</body>
+</html>
