@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图片切换的练习2</title></title>
+    <style>
+        
+        #container{
+            display: block;
+            width: 500px;
+            height: 500px;
+            background-color: antiquewhite;
+            text-align: center;
+        }
+      img{
+          width: 300px;
+          height: 300px;
+      }
+    </style>
+    <script>
+        window.onload=function(){
+            var img =document.getElementsByTagName("img")[0];
+            var btn1 = document.getElementById("pre");
+            var btn2 = document.getElementById("nex");
+            var title = document.getElementById("title");
+        
+            var arr =["../CSS/exercise/picture/lee01.jpg","../CSS/exercise/picture/lee02.jpg","../CSS/exercise/picture/lee03.jpg","../CSS/exercise/picture/lee04.webp"]
+            var index=0;
+            btn1.onclick =function(){
+                index--;
+                if(index<0){
+                    index=arr.length-1;
+                }
+                img.src=arr[index];
+                title.innerHTML ="一共"+arr.length+"页，"+"当前第"+(index+1)+"页";
+            }
+            btn2.onclick = function(){
+                index++;
+                index=index%4;
+                img.src=arr[index];
+                title.innerHTML ="一共"+arr.length+"页，"+"当前第"+(index+1)+"页";
+            }
+
+        }
+    </script>
+</head>
+<body>
+    <div id="container">
+        <p id="title">一共4页，当前第1页</p>
+        <img src="../CSS/exercise/picture/lee01.jpg" alt="">
+        <br/>
+        <button id="pre">上一页</button>
+        <button id="nex">下一页</button>
+    </div>
+</body>
+</html>
