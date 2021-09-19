@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>事件委派</title>
+     <script>
+         window.onload = function(){
+             var btn = document.getElementById("btn");
+             var ul = document.getElementsByTagName("ul")[0];
+             var li = document.getElementsByTagName("li");
+            // 按钮添加超链接
+             btn.onclick = function(){
+                 var li = document.createElement("li");
+                 li.innerHTML="<a href='#' class='link'>超链接</a>";
+                 ul.appendChild(li);
+             } 
+            //  父元素ul添加点击事件
+            ul.onclick = function(event){
+                event=event||window.event;
+                if(event.target.className=="link"){
+                    alert("点击了超链接,我是ul中的响应函数！");
+                }  
+            } 
+         }
+     </script>
+</head>
+<body>
+    <button id="btn">添加超链接</button>
+    <ul>
+        <li><a href="#" class="link">超链接</a></li>
+        <li><a href="#" class="link">超链接</a></li>
+    </ul>
+</body>
+</html>
