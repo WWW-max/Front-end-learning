@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>拖拽练习</title>
+    <style>
+        #box1{
+            width: 100px;
+            height: 100px;
+            /* border-radius: 50%; */
+            background-color: yellow;
+            position: absolute;
+        }
+        #box2{
+            width: 100px;
+            height: 100px;
+            /* border-radius: 50%; */
+            background-color: green;
+            position: absolute;
+
+        }
+    </style>
+    <script>
+        window.onload = function() {
+            function drag(obj){
+                obj.onmousedown = function (event) {
+                    //  
+                    var ol = event.clientX - obj.offsetLeft;
+                    var ot = event.clientY - obj.offsetTop;
+                    document.onmousemove = function (event) {
+                        event = event || window.event;
+                        var x = event.clientX - ol;
+                        var y = event.clientY - ot;
+                        obj.style.left = x + "px";
+                        obj.style.top = y + "px";
+                    };
+                    document.onmouseup = function () {
+                        document.onmousemove = null;
+                        document.onmouseup = null;
+                    };
+                    return false;
+                }
+            }
+            var box1 = document.getElementById("box1");
+            var box2 = document.getElementById("box2");
+            var img1 = document.getElementById("img1");
+            drag(box1);
+            drag(box2);
+            drag(img1);
+            
+           
+        }
+    </script>
+</head>
+<body>
+    <div id="box1"></div>
+    <div id="box2"></div>
+    <img src="../CSS/exercise/picture/lee02.jpg" id="img1" style="width: 100px; height: 100px; position: absolute;" >
+</body>
+</html>
