@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>div随鼠标移动</title>
+    <style>
+        #box{
+            width: 200px;
+            height: 200px;
+            background-color: cornflowerblue;
+            position: absolute;
+        }
+    </style>
+    <script>
+        window.onload = function(){
+                var box = document.getElementById("box");
+                document.onmousemove = function (event) {
+                
+                var left = event.clientX;
+                var top = event.clientY;
+                
+                var st = document.body.scrollTop||document.documentElement.scrollTop;
+                var sl = document.body.scrollLeft||document.documentElement.scrollLeft;
+                // 设置偏移量
+                box.style.top = top+st +"px";
+                box.style.left = left+sl+"px";
+
+            }
+        }
+      
+    </script>
+</head>
+<body>
+    <div id="box"></div>
+    <!-- <script>
+        var box = document.getElementById("box");
+        var body =document.body;
+        body.onmousemove = function(event) {
+            event = event||window.event;
+            event.clientX;
+
+        }
+    </script> -->
+</body>
+</html>
