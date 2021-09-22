@@ -5,7 +5,7 @@ const { mainModule } = require('process');
 function readfile1() {
     return new Promise((resolve, reject) => {
         fs.readFile("C:\\Users\\ASUS\\Desktop\\nodefs1.txt", (err, data) => {
-            //    如果失败
+            //  如果失败
             if (err) reject(err);
             // 如果成功
             resolve(data);
@@ -15,7 +15,7 @@ function readfile1() {
 function readfile2() {
     return new Promise((resolve, reject) => {
         fs.readFile("C:\\Users\\ASUS\\Desktop\\nodefs2.txt", (err, data) => {
-            //    如果失败
+            //  如果失败
             if (err) reject(err);
             // 如果成功
             resolve(data);
