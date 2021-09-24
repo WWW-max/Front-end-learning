@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/vue.js"></script>
+</head>
+<body>
+    <!-- 准备一个容器 -->
+    <div id="root">
+         单向数据绑定<input type="text" placeholder="请输入数据1" v-bind:value="text"></input>
+         <br/>
+         双向数据绑定<input type="text" placeholder="请输入数据2" v-model="text"></input>
+    </div>
+    <script type="text/javascript">
+         Vue.config.productionTip = false;
+         new Vue({
+             el:'#root',
+             data:{
+                 text:'hello'
+             }
+         });
+    </script>
+</body>
+</html>
