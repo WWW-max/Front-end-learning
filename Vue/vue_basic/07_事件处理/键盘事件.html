@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/vue.js"></script>
+    <style>
+        .box{
+            width: 200px;  
+            height: 200px;
+            background-color: springgreen;
+        }
+    </style>
+</head>
+<body>
+    <div id="root">
+    <!-- 按回车触发 -->
+    按下后抬起回车触发<input type="text" @keyup.enter="f1"><br/>
+    按下向上方向键触发 <input type="text" @keydown.up="f2"><br/>
+    按空格抬起触发<input type="text" @keyup.space="space"><br/>
+    </div>
+  
+ 
+    <script>
+       const vm = new Vue({
+           el:'#root',
+           data:{
+               f1() {
+                  alert('按下后抬起回车触发');
+               },
+               f2() {
+                  alert(' 按下向上方向键触发');
+               },
+               space(){
+                alert('按空格抬起触发');
+               }
+               
+           }
+       })
+    </script>
+</body>
+</html>
