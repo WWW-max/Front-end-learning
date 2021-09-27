@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // const XMLHttpRequest = require('xmlhttprequest').XMLHttpRequest;
+            let url = 'https://api.apishop.net/common/weather/get15DaysWeatherByArea?apiKey=uccEb9Pfa41d2c111b55b8b34131b27faee58460782f22a&area=赣州&areaID=上犹';
+            function sendAJAX(url) {
+                return new Promise((resolve, reject) => {
+                    // 1.创建xhr对象
+                    const xhr = new XMLHttpRequest();
+                    // 2.初始化
+                    xhr.open('GET', url);
+                    // 3.发送
+                    xhr.send();
+                    // 4.事件绑定
+                    xhr.onreadystatechange = function () {
+                        if (xhr.readyState === 4) {
+                            if (xhr.status >= 200 && xhr.status < 300) {
+                                // 成功啦
+                                resolve(xhr.response);
+                            } else {
+                                reject(xhr.status);
+                            }
+                        }
+                    }
+                });
+            }
+
+            // // promisethen方法测试
+            //  sendAJAX(url).then(value => {
+            //     console.log(value);
+            // }, reason => {
+            //     console.log(reason);
+            // });
+
+            // async和await测试  axios
+            async function main(){
+                // 发送AJAX请求
+                let result=await sendAJAX(url);
+                console.log(result);
+            }
+            main();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
