@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/vue.js"></script>
+</head>
+<body>
+    <div id="root">
+        <hello1></hello1>
+        <hello2></hello2>
+    </div>
+    <script>
+        Vue.config.productionTip = false;
+
+        // 创建组件hello1
+        const hello1  = Vue.extend({
+            template:`<h1>{{a}}</h1>`,
+            data(){
+                return{
+                     a:'hello1组件'
+                }
+               
+            }
+        });
+        // 创建组件hello2  简写形式：const hello2 = options 
+        const hello2 = {
+            template:`<h2>{{b}}</h2>`,
+            data(){
+                return {
+                    b:'hello2组件'
+                }
+            }
+        }
+        // // 第二步全局注册组件
+        // Vue.component('hello1',hello1)
+
+        new Vue({
+           el:'#root',
+           data:{
+
+           },
+        //    局部注册组件
+           components:{
+            //    hello //简写
+               hello1:hello1,
+               hello2:hello2
+           }
+           
+        });
+    </script>
+</body>
+</html>
