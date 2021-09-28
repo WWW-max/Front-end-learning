@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/vue.js"></script>
+    <style>
+        .basic{
+            width: 100px;
+            height: 100px;
+            background-color: chartreuse;
+        }
+        .mood{
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+        }
+        .mood2{
+            width: 100px;
+            height: 100px;
+            background-color: rgb(76, 0, 255);
+        }
+    </style>
+</head>
+<body>
+    <div id="root">
+        <!-- :class 绑定类样式 -->
+      <div class="basic" :class="mood" @click="change"></div>
+    </div>
+</body>
+    <script>
+        Vue.config.productionTip = false;
+        new Vue({
+            el:'#root',
+            data:{
+               mood:'mood'
+            },
+            methods:{
+                change(){
+                    this.mood='mood2'
+                }
+            }
+        })
+    </script>
+</html>
