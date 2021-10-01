@@ -12,12 +12,14 @@
     for(let i=0;i<r;i++){
         dp[i] = new Array();
     }
+    // 矩阵左上角第一个数
+    dp[0][0]=grid[0][0];
   //   第一列
-    for(let i=0;i<r;i++){
+    for(let i=1;i<r;i++){
         dp[i][0] = grid[i][0]+dp[i-1][0];
     }
   //   第一行
-    for(let j=0;j<h;j++){
+    for(let j=1;j<h;j++){
         dp[0][j]=grid[0][j]+dp[0][j-1];
     }
     for(let i=1;i<r;i++){
