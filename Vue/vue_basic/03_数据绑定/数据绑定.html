@@ -10,9 +10,11 @@
 <body>
     <!-- 准备一个容器 -->
     <div id="root">
-         单向数据绑定<input type="text" placeholder="请输入数据1" v-bind:value="text"></input>
+         <!-- 单向数据绑定<input type="text" placeholder="请输入数据1" v-bind:value="text"></input> -->
+         单向数据绑定简写<input type="text" placeholder="请输入数据1" :value="text"></input>
          <br/>
-         双向数据绑定<input type="text" placeholder="请输入数据2" v-model="text"></input>
+         <!-- 双向数据绑定<input type="text" placeholder="请输入数据2" v-model:value="text"></input> -->
+         双向数据绑定简写<input type="text" placeholder="请输入数据2" v-model="text"></input>
     </div>
     <script type="text/javascript">
          Vue.config.productionTip = false;
