@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>对象属性名中含-</title></title>
+    <script>
+        var obj = {
+                name: 'bruce',
+                'home-address': '北京'
+                }
+        // 第一种方法
+        console.log(obj['home-address']);
+        console.log('改变前：',obj);
+        // 第二种方法 ，将短横转换为驼峰命名
+        function deepNewObj (obj) {
+            let deepObj = {}
+            for(let key in obj){
+                deepObj[getKey(key)] = obj[key]
+
+                if(obj[key] && obj[key] instanceof Object){
+                    deepObj[getKey(key)] =deepNewObj(obj[key])
+                }
+            }
+            return deepObj
+        }
+        function getKey(key){
+            if (key.includes('-')){
+                let oarr =key.split('-')
+                for(let i=1;i<oarr.length;i++){
+                    oarr[i]=oarr[i].charAt(0).toUpperCase()+oarr[i].slice(1)
+                }
+                return oarr.join('')
+            }
+            return key
+        }
+        obj=deepNewObj(obj);
+        console.log('改变后：',obj);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
