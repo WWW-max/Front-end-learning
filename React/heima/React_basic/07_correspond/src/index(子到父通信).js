@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 
 /**
- * 兄弟组件间的通信
+ * 子组件-->父组件的通信
  * props
  */
 //父组件
