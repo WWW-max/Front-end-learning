@@ -2,6 +2,7 @@
  * @param {number} n
  * @return {number}
  */
+/**斐波那契数列：0 1 1 2 3 5  爬楼梯：1 2 3 5*/
 /**法四：迭代(不适应数组，使用res,a,b三个变量，空间复杂度为O(1)) */
 var fib = function(n) {
     if(n<=0) return 0;
